@@ -1,0 +1,181 @@
+/* Makers And Co v0.1 http://makersand.co */
+/* Built by Jeremy Abbett and Sven Kräuter */
+/* In a rub-a-dub style! */	
+	
+	/* 
+		Eric Meyer's CSS Reset
+		http://meyerweb.com/eric/tools/css/reset/ 
+		v2.0 | 20110126
+   		License: none (public domain)
+	*/
+	
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	html {
+		font-size: 62.5%; 
+	}
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+	body {
+		line-height: 1;
+	}
+	ol, ul {
+		list-style: none;
+	}
+	blockquote, q {
+		quotes: none;
+	}
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+/* 
+	Enough talk, let's rock!
+*/
+	
+	
+body { 
+	font: 14px/20px 'PT Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	margin: 0;
+	padding: 0;
+	background: #fff url(img/makersandco.jpg) left top fixed no-repeat;
+	-moz-background-size: cover;
+	background-size: cover;
+	color: #000;
+}
+
+	@media only all and (max-width: 1024px) and (max-height: 768px) { /* Important: 1024x768px has the same ratio as 1280x960px */
+		body {	
+			-moz-background-size: 1024px 768px;
+			background-size: 1024px 768px;
+		}
+}
+
+#container {
+	margin: 20px auto;
+	width: 600px;
+	padding: 25px;
+	text-align: center;
+	background: transparent url(img/white50.png);
+	background: rgba(255, 255, 255, 0.5) none;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+		
+input,
+textarea {
+	font: 12px/20px  'PT Sans', Helvetica, Arial, sans-serif;
+	background: #fff;
+	color: #999;
+	border: 1px solid #fff;
+}
+
+a { color: #000; text-decoration: none; line-height: inherit;}
+	a:hover { color: #00a6fc; border-bottom-color:#00a6fc;  }
+	a:focus { color: #000; border-bottom-color:#000; }
+	a:hover, a:active { outline: none; }
+	p a, p a:visited { line-height: inherit; border-bottom: 1px dotted; border-bottom-color:#00a6fc;}
+
+a img { border: none; }
+
+h1,
+h2 {
+	font-weight: normal; text-transform:uppercase;
+	padding: 0;
+	font-family: 'Arvo', Georgia, Times, serif;
+}
+
+h1 {
+	font-size: 16px;
+	line-height: 28px;
+	margin-bottom: 6px;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 34px;
+	margin: 20px 20px 10px;
+	color: rgba(255,255,255,0.75);
+}
+
+
+#logo {
+	margin: 30px 0px;
+	display:block;
+	width:100%;
+	text-align: center;
+}
+
+
+#logo a:hover { text-decoration: none; }
+
+form { margin: 16px 0 18px; }
+input.input-text, textarea { font-size: 13px; padding: 4px 3px 2px; background: #fff; }
+input.input-text:focus, textarea:focus { outline: none !important; }
+input.input-text.oversize, textarea.oversize { font-size: 17px !important; color: #00a6fc; width: 400px; padding: 4px 5px !important; }
+
+	.button {
+		background: #00a6fc;
+		display: inline-block;
+		text-align: center;
+		padding: 9px 34px 11px;
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		line-height: 1;
+		position: relative;
+		cursor: pointer;
+		border: none;
+	}
+	
+  	/* Don't use native buttons on iOS */
+	input[type=submit].button { -webkit-appearance: none; }
+	
+	.button.nice { 
+		background: #00a6fc url(img/button-gloss.png) repeat-x 0 -34px;
+		-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+		text-shadow: 0 -1px 1px rgba(0,0,0,0.28);
+		background: #00a6fc url(img/button-gloss.png) repeat-x 0 -34px, -moz-linear-gradient(top, rgba(255,255,255,.4) 0%, transparent 100%);
+		background: #00a6fc url(img/button-gloss.png) repeat-x 0 -34px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.4)), color-stop(100%,transparent));
+		border: 1px solid #0593dc;
+		-webkit-transition: background-color .15s ease-in-out;
+		-moz-transition: background-color .15s ease-in-out;
+		-o-transition: background-color .15s ease-in-out;
+	}
+
+	.button.radius {
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+
+
